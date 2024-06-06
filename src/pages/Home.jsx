@@ -3,7 +3,7 @@ function Home() {
 
     return (
         <section>
-            Home Page
+            Your are logged in 
         </section>
     )
 }
