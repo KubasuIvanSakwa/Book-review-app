@@ -4,27 +4,40 @@ import {
   createBrowserRouter, 
   createRoutesFromElements 
 } from "react-router-dom"
+import { lazy, Suspense } from "react"
 
-import Login from "./pages/Login"
-import Home from "./pages/Home"
+import Layout from "./pages/Layout"
+const Recommendation = lazy(()=> import('./pages/Recommendation')) 
+const LandingPage = lazy(()=> import('./pages/LandingPage')) 
+const Login = lazy(()=> import('./pages/Login')) 
+const Profile = lazy(()=> import('./pages/Profile')) 
+
 
 function App() {
   const token = localStorage.getItem('token')
 
-  const router = createBrowserRouter(createRoutesFromElements(
+  const routes = createBrowserRouter(createRoutesFromElements(
       <Route>
-      { 
-        token ?
-          <Route path="/" element={<Home />} />
-          :
-          <Route path="/login" element={<Login />} />
-      }
+          <Route path="/" element={<Layout />} >
+              <Route index element={<LandingPage />} />
+              { 
+                token ?
+                  <Route path="/Hero" element={<Recommendation />} />
+                  :
+                  <Route path="/login" element={<Login />} />
+              } 
+
+              <Route path="/profile" element={<Profile />} />
+              <Route path="*" element={<div>404</div>} />
+          </Route>
       </Route>
   ))
 
   return (
     <section>
-        <RouterProvider router={router} />
+        <Suspense fallback={<div>Loading... </div>}>
+          <RouterProvider router={routes} />
+        </Suspense>
     </section>
   )
 }
