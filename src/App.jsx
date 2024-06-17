@@ -7,6 +7,7 @@ import {
 import { lazy, Suspense } from "react"
 
 import Layout from "./pages/Layout"
+import Loader from "./components/Loader"
 const Recommendation = lazy(()=> import('./pages/Recommendation')) 
 const LandingPage = lazy(()=> import('./pages/LandingPage')) 
 const Login = lazy(()=> import('./pages/Login')) 
@@ -24,7 +25,10 @@ function App() {
                 token ?
                   <Route path="/Hero" element={<Recommendation />} />
                   :
-                  <Route path="/login" element={<Login />} />
+                  <>
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/load" element={<Loader />} />
+                  </>
               } 
 
               <Route path="/profile" element={<Profile />} />
@@ -35,7 +39,7 @@ function App() {
 
   return (
     <section>
-        <Suspense fallback={<div>Loading... </div>}>
+        <Suspense fallback={<Loader />}>
           <RouterProvider router={routes} />
         </Suspense>
     </section>
