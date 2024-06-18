@@ -73,7 +73,7 @@ function Search() {
                 onClick={() => {
                     setToggleSearch(false)
                 }}  
-                className={`${ToggleSearch === false ? 'hidden' : "flex"} fixed z-[55] w-full h-full bg-[#23272F]/70 backdrop-blur-sm justify-center p-2`}
+                className={`${ToggleSearch === false ? 'hidden' : "flex"} fixed z-[55] w-full h-[100vh] bg-[#23272F]/70 backdrop-blur-sm justify-center p-2 top-[0.3rem]`}
             >
                 <div
                     onClick={(e) => {
@@ -117,7 +117,7 @@ function Search() {
                                 <div className='w-full flex justify-center mb-1'>
                                     <span className='text-white/40 pt-6'>No recent searches</span>
                                 </div>
-                        }
+                            }
                     </div>
                     <div className='w-full bottom-1 h-[5rem] rounded-bl-2xl rounded-br-2xl border-t border-white/20'>
                         {/* footer */}

@@ -2,7 +2,7 @@
 function Loader() {
 
     return (
-        <section className="">
+        <section className="bg-[#23272F] w-full h-[100vh] z-[60] relative flex justify-center items-center">
             <div className="jelly"></div>
             <svg width="0" height="0" className="jelly-maker">
                 <defs>
