@@ -34,7 +34,7 @@ function Search() {
 
     return (
         <>
-            <section className="absolute z-50 top-[3rem] p-2 w-full flex justify-center cursor-pointer">
+            <section className="absolute z-50 top-[5rem] p-2 w-full flex justify-center cursor-pointer">
                 <div 
                     className="flex w-[50%] justify-center h-[3.5rem] p-1 "
                     onClick={() => {
