@@ -1,11 +1,12 @@
 import Hero from '../components/Hero.jsx'
-import Nav from './Nav'
+import DetailLandingCard from '../components/DetailLandingCard.jsx'
 
 function LandingPage() {
 
     return (
-        <section>
+        <section className="top-[7rem] relative h-[70vh] flex">
             <Hero />
+            <DetailLandingCard />
         </section>
     )
 }

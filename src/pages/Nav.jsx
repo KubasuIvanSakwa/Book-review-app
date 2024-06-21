@@ -40,10 +40,10 @@ function Nav() {
     return (
         <section className="flex flex-col z-[55] relative">
             <section className="h-[4rem]">
-                <ul ref={ulRef} className="flex w-full h-full p-2 items-center justify-end gap-2 text-xl text-white relative right-6 mt-2">
+                <ul ref={ulRef} className="flex w-full h-full p-2 items-center justify-end gap-2 text-lg text-white relative right-6 mt-2">
                     <li className="flex items-center gap-1 mr-[1.4rem] cursor-pointer">upload <span><img src={upload} className="w-[1.6rem]"/></span></li>
-                    <li className="pr-[1.4rem] border-r mr-[1.4rem] cursor-pointer">support</li>
-                    <li className="w-[3.2rem] h-[3.2rem] flex justify-center relative items-center rounded-full"><img src={user} className="w-full" /></li>
+                    <li className="pr-[1.4rem] border-r mr-[1.4rem] cursor-pointer">about</li>
+                    <li className="w-[2rem] h-[2rem] flex justify-center relative items-center rounded-full"><img src={user} className="w-full" /></li>
                     <li className="flex items-center gap-1 ml-[1.5rem] cursor-pointer">
                         <Link 
                             className=""

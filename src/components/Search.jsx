@@ -36,7 +36,7 @@ function Search() {
         <>
             <section className="absolute z-50 top-[5rem] p-2 w-full flex justify-center cursor-pointer">
                 <div 
-                    className="flex w-[50%] justify-center h-[3.5rem] p-1 "
+                    className="flex w-[50%] justify-center h-[4rem] p-1 "
                     onClick={() => {
                         setToggleSearch(!ToggleSearch)
                     }}
