@@ -15,8 +15,6 @@ const BookDetails = () => {
   } = useFetch(() => fetchAuthors(
     id
   ))
-
-  console.log(data)
   
   return (
     <ScrollView className="flex-1 bg-red-40">
