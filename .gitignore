@@ -4,11 +4,15 @@
 node_modules/
 
 # Expo
+.expo/
 dist/
 web-build/
 expo-env.d.ts
 
+.vscode/
+
 # Native
+.kotlin/
 *.orig.*
 *.jks
 *.p8
@@ -35,3 +39,7 @@ yarn-error.*
 *.tsbuildinfo
 
 app-example
+
+# generated native folders
+/ios
+/android
